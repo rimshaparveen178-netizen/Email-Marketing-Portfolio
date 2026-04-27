@@ -1,0 +1,2493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rimsha Parveen — Email Marketing Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F2E8CE;              /* warmer, golden cream */
+    --paper-warm: #E8D8B0;         /* deeper warm cream */
+    --paper-deep: #1A0F08;         /* deep espresso for hero sections */
+    --paper-mid: #DCC993;          /* mid warm tone for accents */
+    --ink: #0A0604;                /* deepest near-black */
+    --ink-medium: #2A1F18;         /* dark brown-black */
+    --ink-soft: #4D3D2E;           /* warm soft gray */
+    --accent: #B8341A;             /* deep saturated coral */
+    --accent-deep: #6B1B0C;        /* very dark coral for emphasis */
+    --accent-bright: #DD4F2C;      /* bright vivid coral */
+    --accent-soft: #C26B52;        /* soft coral */
+    --rule: #1A0F08;               /* deep rule lines */
+    --gold: #C89438;               /* rich warm gold */
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    background-image:
+      radial-gradient(ellipse at top, rgba(220, 201, 147, 0.4), transparent 70%),
+      radial-gradient(ellipse at bottom, rgba(184, 52, 26, 0.06), transparent 70%);
+    color: var(--ink);
+    line-height: 1.55;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 80px;
+    min-height: 100vh;
+    position: relative;
+    page-break-after: always;
+  }
+
+  .page::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    right: 80px;
+    height: 1px;
+    background: var(--rule);
+    opacity: 0.6;
+  }
+
+  .page::after {
+    content: "";
+    position: absolute;
+    bottom: 30px;
+    left: 80px;
+    right: 80px;
+    height: 1px;
+    background: var(--rule);
+    opacity: 0.6;
+  }
+
+  .runner {
+    position: absolute;
+    top: 38px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .footer-runner {
+    position: absolute;
+    bottom: 38px;
+    left: 80px;
+    right: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  /* ============ COVER PAGE ============ */
+
+  .cover {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 60px;
+  }
+
+  .cover-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+
+  .cover-meta {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    line-height: 2;
+  }
+
+  .cover-meta strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .volume {
+    text-align: right;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  .volume span {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-style: normal;
+    margin-top: 8px;
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .cover-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(80px, 13vw, 180px);
+    line-height: 0.88;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    font-variation-settings: "opsz" 144, "SOFT" 50;
+  }
+
+  .cover-title .first {
+    display: block;
+  }
+
+  .cover-title .last {
+    display: block;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--accent);
+    margin-left: 0.15em;
+  }
+
+  .cover-tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    max-width: 600px;
+    margin-top: 30px;
+    line-height: 1.4;
+    font-weight: 300;
+  }
+
+  .cover-bottom {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: end;
+    gap: 40px;
+    padding-bottom: 40px;
+  }
+
+  .cover-discipline {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink);
+    line-height: 2.2;
+    font-weight: 500;
+  }
+
+  .cover-discipline span {
+    display: block;
+  }
+
+  .cover-discipline span:not(:last-child)::after {
+    content: " ·";
+    color: var(--accent);
+    margin-left: 6px;
+  }
+
+  .cover-mark {
+    font-family: 'Fraunces', serif;
+    font-size: 60px;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--accent);
+    line-height: 1;
+  }
+
+  .cover-year {
+    text-align: right;
+    font-family: 'Fraunces', serif;
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+
+  .cover-year strong {
+    display: block;
+    font-size: 28px;
+    color: var(--ink);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    margin-bottom: 4px;
+  }
+
+  /* ============ ABOUT PAGE ============ */
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+  .section-label::before {
+    content: "";
+    width: 36px;
+    height: 2px;
+    background: var(--accent);
+  }
+
+  .section-label .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-medium);
+    letter-spacing: 0;
+    font-size: 16px;
+  }
+
+  .about {
+    display: block;
+    margin-top: 30px;
+  }
+
+  .about-portrait {
+    position: relative;
+  }
+
+  .portrait-frame {
+    aspect-ratio: 3/4;
+    background: var(--paper-warm);
+    border: 1px solid var(--rule);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portrait-frame::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid var(--accent);
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  .portrait-placeholder {
+    text-align: center;
+    color: var(--ink-soft);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .portrait-placeholder .icon {
+    font-size: 40px;
+    color: var(--accent);
+    opacity: 0.4;
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .portrait-caption {
+    margin-top: 16px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .portrait-caption em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--accent);
+  }
+
+  .about-content h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 0.95;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .about-content h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 300;
+  }
+
+  .about-role {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
+    color: var(--ink-medium);
+    margin-bottom: 38px;
+    font-weight: 600;
+  }
+
+  .about-role::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 2px;
+    background: var(--accent);
+    margin-top: 20px;
+  }
+
+  .about-bio {
+    font-size: 19px;
+    line-height: 1.7;
+    color: var(--ink);
+    margin-bottom: 24px;
+    font-weight: 400;
+  }
+
+  .about-bio:first-of-type::first-letter {
+    font-family: 'Fraunces', serif;
+    font-size: 72px;
+    line-height: 0.9;
+    float: left;
+    padding: 8px 14px 0 0;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .about-bio em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .about-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 48px;
+    padding-top: 34px;
+    border-top: 2px solid var(--rule);
+  }
+
+  .about-meta dt {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-medium);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .about-meta dd {
+    font-family: 'Fraunces', serif;
+    font-size: 18px;
+    color: var(--ink);
+    line-height: 1.4;
+    font-weight: 400;
+    word-break: break-word;
+  }
+
+  .about-meta dd em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  /* ============ BRANDS PAGE ============ */
+
+  .brands-intro {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    margin-bottom: 60px;
+    align-items: end;
+  }
+
+  .brands-intro h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+  }
+
+  .brands-intro h2 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .brands-intro-text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--ink-medium);
+    padding-bottom: 12px;
+  }
+
+  .brands-intro-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 2px solid var(--rule);
+    border-bottom: 2px solid var(--rule);
+    margin-bottom: 50px;
+  }
+
+  .stat {
+    padding: 28px 20px;
+    border-right: 1px solid var(--rule);
+    text-align: center;
+  }
+
+  .stat:last-child { border-right: none; }
+
+  .stat-num {
+    font-family: 'Fraunces', serif;
+    font-size: 54px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.025em;
+    margin-bottom: 8px;
+  }
+
+  .stat-num em {
+    font-style: italic;
+  }
+
+  .stat-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-medium);
+    font-weight: 600;
+  }
+
+  .brands-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+
+  .brand-card {
+    padding: 28px 24px;
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+    position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: background 0.3s ease;
+  }
+
+  .brand-card:hover {
+    background: var(--paper-warm);
+  }
+
+  .brand-card.featured {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .brand-card.featured .brand-num,
+  .brand-card.featured .brand-vertical {
+    color: var(--gold);
+  }
+
+  .brand-card.featured .brand-name {
+    color: var(--paper);
+  }
+
+  .brand-card.featured .brand-work {
+    color: var(--paper-warm);
+  }
+
+  .brand-card.featured .brand-status {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .brand-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 400;
+    margin-bottom: 4px;
+  }
+
+  .brand-vertical {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 14px;
+  }
+
+  .brand-name {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .brand-work {
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    flex-grow: 1;
+  }
+
+  .brand-status {
+    margin-top: 14px;
+    display: inline-block;
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    font-weight: 600;
+    padding: 4px 0;
+    border-top: 1px solid var(--accent);
+    align-self: flex-start;
+  }
+
+  .brands-footer {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .footer-quote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink);
+    font-weight: 300;
+  }
+
+  .footer-quote::before {
+    content: """;
+    font-size: 60px;
+    line-height: 0;
+    vertical-align: -25px;
+    color: var(--accent);
+    margin-right: 4px;
+  }
+
+  .footer-platforms {
+    text-align: right;
+  }
+
+  .footer-platforms .label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .footer-platforms .tools {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  /* ============ CASE STUDY ELEMENTS ============ */
+
+  .case-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 140px);
+    gap: 50px;
+  }
+
+  .case-cover-top .case-eyebrow {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 80px;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
+    font-weight: 300;
+  }
+
+  .case-cover h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(64px, 9vw, 120px);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+  }
+
+  .case-cover h1 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 300;
+  }
+
+  .case-cover .tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-soft);
+    max-width: 640px;
+    line-height: 1.4;
+    font-weight: 300;
+    margin-top: 30px;
+  }
+
+  .case-meta-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .case-meta-strip dt {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .case-meta-strip dd {
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  .case-meta-strip dd em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  /* Page headlines for inner case study pages */
+  .page-headline {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 66px;
+    line-height: 0.95;
+    letter-spacing: -0.028em;
+    color: var(--ink);
+    margin-bottom: 20px;
+    margin-top: 18px;
+  }
+
+  .page-headline em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  .page-deck {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 23px;
+    color: var(--ink-soft);
+    max-width: 740px;
+    line-height: 1.45;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+
+  /* Body text */
+  .case-body {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--ink-medium);
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+
+  .case-body strong { font-weight: 600; }
+  .case-body em {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  /* Screenshot frame */
+  .screenshot {
+    margin: 24px 0 14px;
+    background: white;
+    border: 2px solid var(--ink);
+    box-shadow:
+      0 20px 50px -10px rgba(10, 6, 4, 0.35),
+      0 6px 16px rgba(10, 6, 4, 0.15);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .screenshot::before {
+    content: "";
+    display: block;
+    height: 6px;
+    background: var(--accent);
+  }
+
+  .screenshot img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .screenshot.small {
+    max-width: 540px;
+  }
+
+  .figure-caption {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--rule);
+    line-height: 1.5;
+  }
+
+  .figure-caption .label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .figure-caption .text {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* Hero metric grid */
+  .metrics-hero {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    border-top: 2px solid var(--rule);
+    border-bottom: 2px solid var(--rule);
+    margin: 30px 0 40px;
+  }
+
+  .metric-hero {
+    padding: 30px 20px 26px;
+    border-right: 1px solid var(--rule);
+  }
+
+  .metric-hero:last-child { border-right: none; }
+
+  .metric-hero .num {
+    font-family: 'Fraunces', serif;
+    font-size: 46px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+
+  .metric-hero .num .small {
+    font-size: 26px;
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .metric-hero .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-medium);
+    font-weight: 600;
+  }
+
+  .metric-hero .delta {
+    display: block;
+    font-size: 12px;
+    color: #2d6a3e;
+    margin-top: 8px;
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+
+  /* Sub-section */
+  .subsection {
+    margin-top: 40px;
+  }
+
+  .subsection-label {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .subsection h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.1;
+    color: var(--ink);
+    margin-bottom: 20px;
+    letter-spacing: -0.025em;
+  }
+
+  .subsection h3 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  /* Inventory grid (for flow taxonomy, segment categories etc) */
+  .inventory {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px 56px;
+    margin: 28px 0 34px;
+  }
+
+  .inventory-block h4 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .inventory-block ul {
+    list-style: none;
+  }
+
+  .inventory-block li {
+    font-family: 'Fraunces', serif;
+    font-size: 17px;
+    color: var(--ink);
+    padding: 5px 0;
+    line-height: 1.45;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .inventory-block li::before {
+    content: "—";
+    color: var(--accent);
+    flex-shrink: 0;
+    font-weight: 700;
+  }
+
+  /* Scope card */
+  .scope {
+    background: var(--paper-warm);
+    padding: 28px 32px;
+    border-left: 4px solid var(--accent);
+    margin: 30px 0;
+  }
+
+  .scope h4 {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+
+  .scope ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 32px;
+  }
+
+  .scope li {
+    font-size: 16px;
+    color: var(--ink);
+    padding: 4px 0;
+    display: flex;
+    gap: 12px;
+    line-height: 1.45;
+  }
+
+  .scope li::before {
+    content: "◇";
+    color: var(--accent);
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  /* Inline mini stat */
+  .mini-stats {
+    display: flex;
+    gap: 48px;
+    margin: 24px 0 34px;
+    padding: 24px 0;
+    border-top: 2px solid var(--rule);
+    border-bottom: 2px solid var(--rule);
+  }
+
+  .mini-stat .num {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    font-weight: 400;
+    color: var(--accent);
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+
+  .mini-stat .label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-medium);
+    font-weight: 600;
+    margin-top: 8px;
+  }
+
+  /* Pull quote */
+  .pull-quote {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 1.4;
+    color: var(--ink);
+    border-left: 4px solid var(--accent);
+    padding-left: 32px;
+    margin: 36px 0;
+    font-weight: 400;
+    max-width: 760px;
+  }
+
+  /* ============ METHODOLOGY CHAPTER ============ */
+
+  /* Phases TOC on Chapter IV cover */
+  .phases-toc {
+    border-top: 2px solid var(--rule);
+    margin-top: 30px;
+  }
+
+  .phase-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 2fr;
+    align-items: baseline;
+    gap: 28px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .phase-row .phase-num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 36px;
+    color: var(--accent);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+  }
+
+  .phase-row .phase-name {
+    font-family: 'Fraunces', serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: -0.015em;
+  }
+
+  .phase-row .phase-desc {
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    text-align: left;
+  }
+
+  /* Email design triptych grid */
+  .email-triptych {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 28px 0 16px;
+  }
+
+  .email-card {
+    background: white;
+    border: 2px solid var(--ink);
+    box-shadow:
+      0 14px 32px -8px rgba(10, 6, 4, 0.30),
+      0 4px 10px rgba(10, 6, 4, 0.12);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .email-card-label {
+    padding: 10px 14px 12px;
+    border-top: 1px solid var(--rule);
+    background: var(--paper-warm);
+  }
+
+  .email-card-label .num {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--accent);
+    margin-bottom: 2px;
+  }
+
+  .email-card-label .title {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ============ PRINT ============ */
+
+  @media print {
+    body { background: white; }
+    .page {
+      page-break-after: always;
+      min-height: auto;
+      padding: 50px 60px;
+    }
+    .brand-card:hover { background: var(--paper); }
+  }
+
+  /* ============ RESPONSIVE ============ */
+
+  @media (max-width: 900px) {
+    .page { padding: 50px 30px; }
+    .page::before, .page::after,
+    .runner, .footer-runner { left: 30px; right: 30px; }
+    .about, .brands-intro { grid-template-columns: 1fr; gap: 40px; }
+    .brands-grid { grid-template-columns: repeat(2, 1fr); }
+    .stats-row, .metrics-hero { grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(2) { border-right: none; }
+    .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--rule); }
+    .metric-hero:nth-child(2) { border-right: none; }
+    .metric-hero:nth-child(1), .metric-hero:nth-child(2) { border-bottom: 1px solid var(--rule); }
+    .inventory { grid-template-columns: 1fr; }
+    .case-meta-strip { grid-template-columns: repeat(2, 1fr); }
+    .scope ul { grid-template-columns: 1fr; }
+    .mini-stats { flex-wrap: wrap; gap: 24px; }
+    .phase-row { grid-template-columns: 50px 1fr; gap: 14px; }
+    .phase-row .phase-desc { grid-column: 1 / -1; padding-left: 64px; }
+    .email-triptych { grid-template-columns: 1fr; gap: 14px; }
+    .cover-bottom { grid-template-columns: 1fr; text-align: center; gap: 30px; }
+    .cover-discipline span:not(:last-child)::after { content: " · "; }
+    .cover-discipline span { display: inline; }
+    .cover-year { text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 01 — COVER ============ -->
+<section class="page cover">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Rimsha Parveen</span>
+  </div>
+
+  <div class="cover-top">
+    <div class="cover-meta">
+      <strong>The Portfolio</strong>
+      Email &amp; SMS Marketing<br>
+      Lifecycle &amp; Retention Strategy
+    </div>
+    <div class="volume">
+      Volume One<br>
+      <span>Selected Works · 2023–2026</span>
+    </div>
+  </div>
+
+  <div>
+    <h1 class="cover-title">
+      <span class="first">Rimsha</span>
+      <span class="last">Parveen.</span>
+    </h1>
+    <p class="cover-tagline">
+      A three-year retrospective of email &amp; SMS marketing built across seven brands, four verticals, and one philosophy — that every message should earn its place in the inbox.
+    </p>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-discipline">
+      <span>Strategy</span>
+      <span>Lifecycle Flows</span>
+      <span>Segmentation</span>
+      <span>Klaviyo &amp; SMS</span>
+      <span>Deliverability</span>
+    </div>
+    <div class="cover-mark">R&middot;P</div>
+    <div class="cover-year">
+      <strong>2023 — 2026</strong>
+      Three years &middot; Seven brands
+    </div>
+  </div>
+</section>
+
+<!-- ============ PAGE 02 — ABOUT ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Chapter I — About</span>
+  </div>
+
+  <div class="section-label">
+    <span>Chapter One</span>
+    <span class="num">i.</span>
+    <span>The Practitioner</span>
+  </div>
+
+  <div class="about">
+    <div class="about-content" style="max-width: 820px;">
+      <h1>An <em>email-first</em><br>marketer.</h1>
+      <div class="about-role">Director of Outbound Marketing · OpiMax Inc.</div>
+
+      <p class="about-bio">
+        Three years ago I joined OpiMax Incorporated to build email and SMS programs for brands that needed more than a templated welcome series. Since then I've architected the lifecycle for <em>seven ecommerce businesses</em> across beauty, home goods, sporting goods, and food &amp; beverage — each with its own voice, its own customer, and its own definition of a good open rate.
+      </p>
+
+      <p class="about-bio">
+        My work lives at the intersection of strategy and execution. I write the segment logic, draw the flow architecture, draft the copy, brief the designer, set up the deliverability hygiene, and read the post-send report — because retention marketing only works when the same hand connects all five.
+      </p>
+
+      <dl class="about-meta" style="grid-template-columns: 1fr 1fr 1fr;">
+        <div>
+          <dt>Available For</dt>
+          <dd><em>Senior</em> roles</dd>
+        </div>
+        <div>
+          <dt>Email</dt>
+          <dd>rimshaparveen178@gmail.com</dd>
+        </div>
+        <div>
+          <dt>LinkedIn</dt>
+          <dd>linkedin.com/in/<em>rimsha-parveen</em></dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>02</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 03 — BRANDS MANAGED ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Chapter II — Scope</span>
+  </div>
+
+  <div class="section-label">
+    <span>Chapter Two</span>
+    <span class="num">ii.</span>
+    <span>Brands Under Management</span>
+  </div>
+
+  <div class="brands-intro">
+    <h2>Seven brands.<br>Four <em>verticals</em>.<br>One inbox.</h2>
+    <p class="brands-intro-text">
+      <strong>Running multi-account email programs is a discipline of context-switching</strong> — every brand has its own voice, its own buyer, its own promotional cadence. Over three years at OpiMax I've kept seven of them moving in parallel, each on its own calendar and reporting rhythm.
+    </p>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-num">07</div>
+      <div class="stat-label">Brands Managed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">04</div>
+      <div class="stat-label">Verticals</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">03<em>yrs</em></div>
+      <div class="stat-label">Tenure</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">01</div>
+      <div class="stat-label">Lead Strategist</div>
+    </div>
+  </div>
+
+  <div class="brands-grid">
+
+    <div class="brand-card featured">
+      <div>
+        <div class="brand-num">i.</div>
+        <div class="brand-vertical">Spa &amp; Home — USA</div>
+        <div class="brand-name">Master Spa Parts</div>
+        <div class="brand-work">Hero account. Full lifecycle build: 30+ segments, CLV-tiered abandoned cart, winback, replenishment, VIP, post-purchase, SMS &amp; deliverability.</div>
+      </div>
+      <span class="brand-status">Hero Case Study →</span>
+    </div>
+
+    <div class="brand-card">
+      <div>
+        <div class="brand-num">ii.</div>
+        <div class="brand-vertical">Sporting Goods</div>
+        <div class="brand-name">Caddie Club</div>
+        <div class="brand-work">Email program management and campaign cadence.</div>
+      </div>
+      <span class="brand-status">Multi-account</span>
+    </div>
+
+    <div class="brand-card">
+      <div>
+        <div class="brand-num">iii.</div>
+        <div class="brand-vertical">Recommendations</div>
+        <div class="brand-name">Expert-Pick</div>
+        <div class="brand-work">Email program management.</div>
+      </div>
+      <span class="brand-status">Multi-account</span>
+    </div>
+
+    <div class="brand-card">
+      <div>
+        <div class="brand-num">iv.</div>
+        <div class="brand-vertical">Beauty &amp; Skincare</div>
+        <div class="brand-name">kaia naturals</div>
+        <div class="brand-work">Klaviyo program support across campaigns and lifecycle flows.</div>
+      </div>
+      <span class="brand-status">Multi-account</span>
+    </div>
+
+    <div class="brand-card">
+      <div>
+        <div class="brand-num">v.</div>
+        <div class="brand-vertical">Food &amp; Beverage</div>
+        <div class="brand-name">León Y Sol</div>
+        <div class="brand-work">9-email post-purchase flow, holiday campaign calendar, May 2026 calendar, ManyChat Instagram setup, brand &amp; mood-board comparison.</div>
+      </div>
+      <span class="brand-status">Featured →</span>
+    </div>
+
+    <div class="brand-card">
+      <div>
+        <div class="brand-num">vi.</div>
+        <div class="brand-vertical">Agency · Internal</div>
+        <div class="brand-name">OpiMax Inc.</div>
+        <div class="brand-work">Outbound program — cold email templates, white-label agency pitch, executive follow-ups.</div>
+      </div>
+      <span class="brand-status">Internal</span>
+    </div>
+
+    <div class="brand-card">
+      <div>
+        <div class="brand-num">vii.</div>
+        <div class="brand-vertical">DTC · 3D-Printed Golf</div>
+        <div class="brand-name">PLAyers Market</div>
+        <div class="brand-work">Klaviyo master contact list merge (170k+ unique contacts), customer database build, Etsy &amp; Shopify program support.</div>
+      </div>
+      <span class="brand-status">DTC</span>
+    </div>
+
+    <div class="brand-card" style="background: var(--paper-warm);">
+      <div>
+        <div class="brand-num" style="color: var(--ink-soft);">—</div>
+        <div class="brand-vertical">Methodology</div>
+        <div class="brand-name" style="font-size: 22px;">A repeatable <em style="font-style: italic; color: var(--accent);">system</em>, not a templated playbook.</div>
+        <div class="brand-work">Each brand gets its own segment architecture and voice — but a shared discipline in flow logic, deliverability, and reporting.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="brands-footer">
+    <p class="footer-quote">
+      Managing seven brands at once teaches you that the difference between a good email program and a forgettable one is rarely the copy — it's the discipline of the system underneath it.
+    </p>
+    <div class="footer-platforms">
+      <div class="label">Stack</div>
+      <div class="tools">
+        Klaviyo · ManyChat · RuleForge<br>
+        GA4 · GTM · BigQuery
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>03</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 04 — MSP CASE STUDY COVER ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Chapter III — Case Study i.</span>
+  </div>
+
+  <div class="case-cover">
+    <div class="case-cover-top">
+      <div class="case-eyebrow">Case Study i.</div>
+      <h1>Master Spa<br>Parts<em>.</em></h1>
+      <p class="tagline">
+        A complete email, SMS &amp; RCS lifecycle program for the leading retailer of replacement spa parts in North America. Architecture, segmentation, flows, campaigns, personalization, analytics &mdash; the entire stack, run from a single Klaviyo account.
+      </p>
+    </div>
+
+    <div>
+      <div class="scope" style="margin-bottom: 30px;">
+        <h4>Scope of Work</h4>
+        <ul>
+          <li>14+ Lifecycle flows (live)</li>
+          <li>30+ Active segments</li>
+          <li>Multi-touch campaign program</li>
+          <li>12+ Custom product feeds</li>
+          <li>6 Custom reports</li>
+          <li>5 Marketing Analytics reports (Beta)</li>
+          <li>Magento 2 integration management</li>
+          <li>SMS — US &amp; Canada (live)</li>
+          <li>RCS — US (newly registered)</li>
+          <li>Predictive analytics &amp; RFM segmentation</li>
+        </ul>
+      </div>
+
+      <dl class="case-meta-strip">
+        <div>
+          <dt>Brand</dt>
+          <dd>Master Spa Parts</dd>
+        </div>
+        <div>
+          <dt>Vertical</dt>
+          <dd><em>Spa &amp; Home</em> &middot; USA</dd>
+        </div>
+        <div>
+          <dt>Platform</dt>
+          <dd>Klaviyo &middot; Magento 2</dd>
+        </div>
+        <div>
+          <dt>Role</dt>
+          <dd><em>Lead</em> Email/SMS Strategist</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>04</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 05 — PERFORMANCE HERO ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Performance</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">a.</span>
+    <span>Performance</span>
+  </div>
+
+  <h2 class="page-headline">The numbers from a <em>single month</em>.</h2>
+  <p class="page-deck">A snapshot of the program's monthly performance. Klaviyo-attributed revenue grew 150% versus the prior period, and email &amp; SMS together accounted for nearly a quarter of total store revenue.</p>
+
+  <div class="metrics-hero">
+    <div class="metric-hero">
+      <div class="num">$898K</div>
+      <div class="label">Total Revenue</div>
+      <span class="delta">↑ 50% vs prev period</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">$205K</div>
+      <div class="label">Klaviyo Attributed</div>
+      <span class="delta">↑ 150% vs prev period</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">22.83<span class="small">%</span></div>
+      <div class="label">Of Total Revenue</div>
+      <span class="delta">attributable to email &amp; SMS</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">$0.25</div>
+      <div class="label">Revenue per Recipient</div>
+      <span class="delta">across all sends</span>
+    </div>
+  </div>
+
+  <p class="case-body">
+    The dashboard below covers the conversion window for <em>March 2026</em>. Email contributed $194,479 (94.77% of attributed revenue), SMS $10,728 (5.23%) — with campaigns leading flows 77% / 22% in revenue split, indicating an active campaign cadence supported by a healthy lifecycle program in the background.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/01_dashboard.png" alt="Master Spa Parts Klaviyo dashboard">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 01</span>
+    <span class="text">Klaviyo dashboard, Master Spa Parts &mdash; March 2026 conversion window. Total &amp; attributed revenue, channel split, top-performing flow visible.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>05</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 06 — FLOW ARCHITECTURE ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Flows</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">b.</span>
+    <span>Lifecycle Architecture</span>
+  </div>
+
+  <h2 class="page-headline">Fourteen flows. <em>One</em> customer journey.</h2>
+  <p class="page-deck">Every customer state — first visit, browse, cart abandon, first order, replenishment, churn risk — is met by a flow. Each is A/B tested, sunset-protected, and tied to a measurable revenue target.</p>
+
+  <div class="inventory">
+    <div class="inventory-block">
+      <h4>Acquisition &amp; Onboarding</h4>
+      <ul>
+        <li>Welcome New Rewards Account Subscriber</li>
+        <li>Welcome Series (Sunset variant)</li>
+        <li>Welcome Series V2 (Live)</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Conversion</h4>
+      <ul>
+        <li>Browse Abandonment — Standard</li>
+        <li>Abandoned Cart Reminder — Live (A/B)</li>
+        <li>Abandoned Cart Reminder — Sunset (A/B)</li>
+        <li>Back in Stock Notification (A/B)</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Retention</h4>
+      <ul>
+        <li>Post-Purchase Nurture (A/B)</li>
+        <li>Filter Replacement</li>
+        <li>VIP / Champion Retention</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Reactivation &amp; Winback</h4>
+      <ul>
+        <li>Customer Winback (A/B)</li>
+        <li>Sunset Flow</li>
+        <li>Needs Attention Winback</li>
+        <li>At-Risk Customer Recovery</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/02_flows.png" alt="Master Spa Parts Klaviyo flows list">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 02</span>
+    <span class="text">Live flows view sorted by attributed revenue. Welcome New Rewards leads at $37,737; Abandoned Cart at $27.08 revenue/recipient.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>06</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 07 — CAMPAIGNS ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Campaigns</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">c.</span>
+    <span>Campaign Program</span>
+  </div>
+
+  <h2 class="page-headline"><em>Excellent</em> open rates, measurable revenue.</h2>
+  <p class="page-deck">Weekly campaigns segmented by lifecycle stage and product affinity. Klaviyo's own benchmarks rate the program "Excellent" on open rate and placed-order rate.</p>
+
+  <div class="metrics-hero">
+    <div class="metric-hero">
+      <div class="num">64.29<span class="small">%</span></div>
+      <div class="label">Avg. Open Rate</div>
+      <span class="delta">Excellent · ↑ 22.53%</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">0.56<span class="small">%</span></div>
+      <div class="label">Avg. Click Rate</div>
+      <span class="delta">Fair benchmark</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">0.15<span class="small">%</span></div>
+      <div class="label">Placed Order Rate</div>
+      <span class="delta">Excellent · ↑ 0.04%</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">$0.26</div>
+      <div class="label">Revenue / Recipient</div>
+      <span class="delta">Good · ↑ $0.04</span>
+    </div>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/03_campaigns.png" alt="Campaign performance dashboard">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 03</span>
+    <span class="text">90-day campaign view. Top campaigns include VIP-only A/B announcements, seasonal events ("Spring Equinox Event"), and educational sends ("Maximized Value: Extend the Life of Every Spa Investment").</span>
+  </div>
+
+  <div class="subsection">
+    <div class="subsection-label">A single campaign, deep-dive</div>
+    <h3>$36,231 from a <em>single VIP send</em>.</h3>
+    <p class="case-body">
+      The campaign below — a reminder to VIP rewards members with 5+ purchases — illustrates the power of tight segmentation. Sent to 45,616 recipients, it generated $36,231 in attributed revenue from 145 orders at a $246.47 average order value. The segment was small, but the audience was right.
+    </p>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/04_campaign-detail.png" alt="EMAIL #2 REMINDER campaign performance">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 04</span>
+    <span class="text">EMAIL #2: REMINDER campaign report &mdash; 28.74% open, 0.48% click, 0.09% placed-order rate, $36,231 revenue, $246.47 AOV.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>07</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 08 — LIST + SEGMENTATION ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Audience</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">d.</span>
+    <span>Audience &amp; Segmentation</span>
+  </div>
+
+  <h2 class="page-headline">182,000 subscribers.<br>Thirty-plus <em>segments</em>.</h2>
+  <p class="page-deck">A list isn't an audience until it's segmented. The MSP audience is sliced behaviorally, by product affinity, by lifecycle stage, and by RFM grouping &mdash; so every send finds the right inbox.</p>
+
+  <div class="subsection" style="margin-top: 0;">
+    <div class="subsection-label">List building</div>
+    <h3>One signup form. <em>$125K</em> in revenue.</h3>
+    <p class="case-body">
+      A single combined Email &amp; SMS popup captures both consents in one interaction, reducing friction and lifting opt-in rates. The form has driven <strong>3,333 submissions at a 4.6% submit rate</strong>, with $125K in attributed revenue tied directly to subscribers acquired through it.
+    </p>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/05_signup-forms.png" alt="Newsletter signup form performance">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 05</span>
+    <span class="text">Live Newsletter / Rewards Email &amp; SMS popup &mdash; 3,333 submissions, 4.6% submit rate, $125K total revenue.</span>
+  </div>
+
+  <figure class="screenshot small">
+    <img src="screenshots/06_newsletter-list.png" alt="Newsletter Signup Email List - 182,925 members">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 06</span>
+    <span class="text">Newsletter Signup &mdash; Email List &middot; 182,925 active members.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>08</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 09 — SEGMENTS ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Segmentation</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">e.</span>
+    <span>Segment Architecture</span>
+  </div>
+
+  <h2 class="page-headline">Behavior. <em>Product.</em> Lifecycle.</h2>
+  <p class="page-deck">The segment library is built on three axes &mdash; what people have done, what they've bought, and where they are in their relationship with the brand. Each segment powers either a flow trigger or a campaign send list.</p>
+
+  <div class="inventory">
+    <div class="inventory-block">
+      <h4>Behavioral</h4>
+      <ul>
+        <li>BIS Subscribers (1,272)</li>
+        <li>Engaged non-openers — Bestsellers (6,345)</li>
+        <li>SUNSET Unengaged 180 days (66,668)</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Product Affinity</h4>
+      <ul>
+        <li>Cover Buyers (10,738)</li>
+        <li>Filter Buyers 150d+ (52,732)</li>
+        <li>Pillow Buyers / 90d+ (3,945 combined)</li>
+        <li>Chemical Buyers — 30+ Days (24,817)</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Lifecycle Stage</h4>
+      <ul>
+        <li>First-Time Buyers 30–90d (5,992)</li>
+        <li>SKU Cover-Only Buyers (Sunset Excl.) (2,921)</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Exclusion / Hygiene</h4>
+      <ul>
+        <li>Sunset exclusion segments per category</li>
+        <li>Engaged-only campaign send lists</li>
+        <li>RFM-derived audience tiers</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/07_lists-segments.png" alt="Lists and segments view">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 07</span>
+    <span class="text">Lists &amp; segments view &mdash; 10 of 30+ segments visible, including product-affinity, behavioral, and sunset-exclusion segments.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>09</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 10 — PRODUCT FEEDS ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Personalization</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">f.</span>
+    <span>Personalization</span>
+  </div>
+
+  <h2 class="page-headline">Twelve <em>product feeds</em>, one personalization engine.</h2>
+  <p class="page-deck">For recommendations to feel personal, the catalog can't be one giant pool. I built a set of custom product feeds aligned to category, customer behavior, and campaign purpose &mdash; so the recommendations a Filter Buyer sees are different from what a Chemical Buyer sees.</p>
+
+  <div class="inventory">
+    <div class="inventory-block">
+      <h4>Behavioral Feeds</h4>
+      <ul>
+        <li>Winback_rec_Bestsellers</li>
+        <li>Winback_rec_General_Buyers</li>
+        <li>Winback_rec_General</li>
+        <li>Winback_rec</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Category Feeds</h4>
+      <ul>
+        <li>Winback_rec_Chemicals</li>
+        <li>Winback_rec_Covers</li>
+        <li>Winback_rec_Filters</li>
+        <li>Eco_Pur_Filter</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Personalized Feeds</h4>
+      <ul>
+        <li>Winback_rec_Personalized_Recs_for_Filter_Buyers</li>
+        <li>Personalized_ChemicalRepurchaseCampaign</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Standard Feeds</h4>
+      <ul>
+        <li>Best_Sellers</li>
+        <li>Post_Purchase_Rec</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="case-body">
+    Each feed is mapped to a specific flow or campaign. The <em>Winback_rec_Personalized_Recs_for_Filter_Buyers</em> feed, for instance, populates the dynamic block in the Customer Winback flow when the recipient is a known filter buyer &mdash; surfacing their likely next replacement filter rather than a generic bestseller.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/12_product-feeds.png" alt="Product feed catalog">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 08</span>
+    <span class="text">Product catalog feeds &mdash; 12 of 15 visible, organized by behavior, category, and campaign purpose.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>10</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 11 — ANALYTICS ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Analytics</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">g.</span>
+    <span>Reporting &amp; Analytics</span>
+  </div>
+
+  <h2 class="page-headline">Custom reports for the <em>team</em>.<br>Marketing Analytics for the <em>questions</em>.</h2>
+  <p class="page-deck">Standard Klaviyo reporting answers most questions. The interesting ones &mdash; how organic traffic compares to Klaviyo-attributed traffic, how RFM groups behave non-Klaviyo &mdash; require building from the bottom up. I run two reporting layers in parallel.</p>
+
+  <div class="subsection" style="margin-top: 10px;">
+    <div class="subsection-label">Layer one</div>
+    <h3>Six <em>custom reports</em>, scheduled.</h3>
+    <p class="case-body">
+      The custom reports library handles the recurring analytics the team needs to see &mdash; monthly revenue summaries, weekly engagement reports, flow-level email funnel analysis &mdash; auto-delivered on schedule.
+    </p>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/08_custom-reports.png" alt="Custom Reports library">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 09</span>
+    <span class="text">Custom Reports library &mdash; MSP Revenue by Month (Monthly), Email Funnel by Flow (Monthly), Email Engagement by Campaign (Weekly), Campaign Performance Report.</span>
+  </div>
+
+  <div class="subsection">
+    <div class="subsection-label">Layer two</div>
+    <h3>Marketing Analytics <em>(Beta)</em> — the deeper questions.</h3>
+    <p class="case-body">
+      Klaviyo's Report Builder (Beta) and predictive features unlock questions standard analytics can't answer. I built a series of reports here for non-Klaviyo attribution and RFM-based traffic analysis &mdash; the reports a director needs to defend the channel's true incrementality.
+    </p>
+  </div>
+
+  <div class="inventory">
+    <div class="inventory-block">
+      <h4>Custom Marketing Reports</h4>
+      <ul>
+        <li>Non-Klaviyo Traffic &amp; Orders</li>
+        <li>Organic-Only Traffic &amp; Orders</li>
+        <li>Non-Klaviyo Traffic by RFM Group</li>
+        <li>Daily Organic Monitor</li>
+        <li>Campaign Performance — Last 30 Days</li>
+      </ul>
+    </div>
+    <div class="inventory-block">
+      <h4>Predictive &amp; Real-Time</h4>
+      <ul>
+        <li>RFM segmentation &amp; predictive CLV</li>
+        <li>Real-time customizable dashboards</li>
+        <li>Cross-channel attribution views</li>
+        <li>Customer-journey-stage analytics</li>
+      </ul>
+    </div>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/09_reports-builder.png" alt="Marketing Analytics Report Builder">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 10</span>
+    <span class="text">Marketing Analytics &middot; Report Builder (Beta) &mdash; five custom reports built using Klaviyo's advanced analytics layer.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>11</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 12 — INTEGRATIONS + SMS/RCS ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Stack &amp; Channels</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">h.</span>
+    <span>Stack &amp; Channels</span>
+  </div>
+
+  <h2 class="page-headline">Integrated stack. <em>Three</em> messaging channels.</h2>
+  <p class="page-deck">Klaviyo is the orchestration layer; the integrations are what give it eyes and hands. I managed the Magento 2 integration (the source of truth for orders &amp; catalog), with Google Ads, Meta Ads, and ShipStation feeding behavioral and shipping events.</p>
+
+  <div class="subsection" style="margin-top: 10px;">
+    <div class="subsection-label">Stack</div>
+    <h3>Magento at the core. <em>Ads &amp; shipping</em> on the wings.</h3>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/10_integrations.png" alt="Klaviyo integrations">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 11</span>
+    <span class="text">Active integrations &mdash; Magento 2 (eCommerce), Google Ads, Meta Ads (Advertising), ShipStation (Shipping).</span>
+  </div>
+
+  <div class="subsection">
+    <div class="subsection-label">Channels</div>
+    <h3>Email + SMS, plus <em>RCS</em> on the front edge.</h3>
+    <p class="case-body">
+      The MSP program runs Email and SMS as core channels, with RCS (Rich Communication Services) registered for the United States &mdash; <em>Klaviyo's newest messaging channel</em>. RCS supports rich media, branded sender identity, and verified business badges, giving SMS-style immediacy with email-style design. Setting it up positioned MSP among the early adopters of richer-than-SMS messaging.
+    </p>
+
+    <div class="mini-stats">
+      <div class="mini-stat">
+        <div class="num">2</div>
+        <div class="label">SMS Countries Active</div>
+      </div>
+      <div class="mini-stat">
+        <div class="num">$10.7K</div>
+        <div class="label">SMS Revenue (March 2026)</div>
+      </div>
+      <div class="mini-stat">
+        <div class="num">RCS</div>
+        <div class="label">Registered &middot; United States</div>
+      </div>
+    </div>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/11_sms-rcs.png" alt="SMS and RCS sender configuration">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 12</span>
+    <span class="text">SMS sender configuration &mdash; toll-free numbers active in US &amp; Canada, RCS country registered for the United States with Master Spa Parts as Sender ID.</span>
+  </div>
+
+  <p class="pull-quote">
+    Email, SMS, and RCS, integrated with Magento, layered with predictive analytics and custom reporting &mdash; all run from a single Klaviyo account, by a single strategist.
+  </p>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>12</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 13 — REVIEWS & SOCIAL PROOF (SHOPPER APPROVED) ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>MSP — Social Proof</span>
+  </div>
+
+  <div class="section-label">
+    <span>Section i.</span>
+    <span class="num">i.</span>
+    <span>Social Proof &amp; Reviews</span>
+  </div>
+
+  <h2 class="page-headline">62,682 reviews.<br><em>4.7</em> stars.</h2>
+  <p class="page-deck">Customer reviews aren't just for the product page &mdash; they're a content asset that powers email campaigns, segmentation, and trust building. Shopper Approved manages MSP's review collection; Klaviyo distributes them across the lifecycle.</p>
+
+  <div class="metrics-hero">
+    <div class="metric-hero">
+      <div class="num">62,682</div>
+      <div class="label">Verified Reviews</div>
+      <span class="delta">collected via Shopper Approved</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">4.7<span class="small">★</span></div>
+      <div class="label">Average Rating</div>
+      <span class="delta">out of 5 stars</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">80<span class="small">%</span></div>
+      <div class="label">Five-Star Reviews</div>
+      <span class="delta">50,000+ five-star ratings</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">4.8<span class="small">★</span></div>
+      <div class="label">Would Buy Again</div>
+      <span class="delta">62K+ respondents</span>
+    </div>
+  </div>
+
+  <p class="case-body">
+    <strong>Review collection runs through Shopper Approved.</strong> Every checkout triggers a review request; every shipped order triggers a follow-up post-delivery review. The two streams combine into MSP's public-facing rating &mdash; 4.7 across 62,682 reviews, with 4.8 on "would buy again" and 4.7 on "recommend this company." Managing the program means tuning the request cadence, monitoring response rate, moderating the queue, and feeding the output back into the marketing program.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/28_shopper_approved.png" alt="Shopper Approved company overview for MasterSpaParts.com showing 62,682 reviews and 4.7 rating">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 13</span>
+    <span class="text">Shopper Approved &mdash; MasterSpaParts.com company overview. 62,682 verified reviews, 4.7 average rating, with 80% five-star and 95% rated four stars or higher.</span>
+  </div>
+
+  <div class="subsection">
+    <div class="subsection-label">Klaviyo integration</div>
+    <h3>Reviews as a <em>content engine</em>.</h3>
+    <p class="case-body" style="margin-top: 14px;">
+      Once Shopper Approved had the reviews, Klaviyo distributed them. Star ratings and review excerpts flow into welcome series emails (build trust early), abandoned cart reminders (close the conviction gap), post-purchase nurture (encourage the next review), and winback campaigns (remind churned customers what they loved). Dedicated review-content campaigns &mdash; "Product Review Highlights" sends spotlighting bestseller reviews each season &mdash; turn the review library into a recurring content stream.
+    </p>
+  </div>
+
+  <p class="pull-quote">
+    62,682 reviews on a product page is an SEO asset. The same reviews, segmented and surfaced across the lifecycle, is a retention asset.
+  </p>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>13</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 14 — CHAPTER IV COVER: WORKING CYCLE ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Chapter IV — Methodology</span>
+  </div>
+
+  <div class="case-cover">
+    <div class="case-cover-top">
+      <div class="case-eyebrow">Chapter iv.</div>
+      <h1>The Working<br>Cycle<em>.</em></h1>
+      <p class="tagline">
+        Six phases. The same shape every time. How a new client moves from access on day one to a fully designed, scheduled, segmented, reporting-ready program — and how a repeatable system makes the multi-brand work feasible.
+      </p>
+    </div>
+
+    <div>
+      <div class="phases-toc">
+        <div class="phase-row">
+          <span class="phase-num">i.</span>
+          <span class="phase-name">Foundation</span>
+          <span class="phase-desc">Account access &middot; historical data &middot; sequenced Drive architecture</span>
+        </div>
+        <div class="phase-row">
+          <span class="phase-num">ii.</span>
+          <span class="phase-name">Audit</span>
+          <span class="phase-desc">AI-augmented gap analysis &middot; tested prompts &middot; Claude Projects</span>
+        </div>
+        <div class="phase-row">
+          <span class="phase-num">iii.</span>
+          <span class="phase-name">Strategy</span>
+          <span class="phase-desc">Flow architecture &middot; campaign calendar &middot; segmentation &amp; list growth</span>
+        </div>
+        <div class="phase-row">
+          <span class="phase-num">iv.</span>
+          <span class="phase-name">Content</span>
+          <span class="phase-desc">Email copy &middot; subject &amp; preview testing &middot; designer briefs</span>
+        </div>
+        <div class="phase-row">
+          <span class="phase-num">v.</span>
+          <span class="phase-name">Design</span>
+          <span class="phase-desc">Figma briefs &middot; Klaviyo native templates &middot; brand consistency</span>
+        </div>
+        <div class="phase-row" style="border-bottom: none;">
+          <span class="phase-num">vi.</span>
+          <span class="phase-name">Production</span>
+          <span class="phase-desc">Klaviyo build &middot; flow logic &middot; scheduling &middot; live performance</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>14</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 15 — PHASE I: FOUNDATION ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Methodology — Phase i.</span>
+  </div>
+
+  <div class="section-label">
+    <span>Phase i.</span>
+    <span class="num">a.</span>
+    <span>Foundation</span>
+  </div>
+
+  <h2 class="page-headline">Access first.<br><em>Architecture</em> second.</h2>
+  <p class="page-deck">Before a single email gets drafted, every new client begins with the same two-step setup &mdash; gather platform credentials and historical data, then organize every artifact into a sequenced folder system that's legible to humans and AI alike.</p>
+
+  <p class="case-body">
+    <strong>Step one is access.</strong> Klaviyo (admin), Google Analytics 4, Google Tag Manager, the relevant ad accounts, the eCommerce platform (Shopify or Magento), and where applicable BigQuery &mdash; all credentialed before anything else. <strong>Step two is the historical pull</strong> &mdash; three months of campaign data, flow performance, attribution, list health metrics. The audit needs context to be useful.
+  </p>
+
+  <p class="case-body">
+    Only once those two things are in hand does the workspace get built. At the agency level, every brand has its own folder under <em>OpiMax Projects &gt; Brand</em>. At the client level, that folder is numbered into a fixed sequence that mirrors the working order &mdash; the same sequence works for every client; only the contents change.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/13_drive_brands.png" alt="OpiMax Projects Brand folder showing all client workspaces">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 13</span>
+    <span class="text">OpiMax Projects &gt; Brand &mdash; eighteen client workspaces under a single naming convention.</span>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/14_drive_msp_structure.png" alt="Master Spa Parts folder structure with numbered subfolders">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 14</span>
+    <span class="text">Master Spa Parts internal structure &mdash; numbered folders mirror the working sequence: 1. Client Information &middot; 2. Discounts &amp; Promotions &middot; 3. Performance Reports &middot; 4. Previous Active Flows &middot; 5. Previous Campaigns &middot; 6. Forms &amp; Popups &middot; 7. Lists &amp; Segments &middot; onward through Deliverables.</span>
+  </div>
+
+  <p class="case-body">
+    A single <em>Reference Document for AI</em> sits at the root of each client folder, mapping what's in each subfolder. That reference is the entry point for the next phase &mdash; it's how the AI gets oriented to the brand without me having to re-explain every time.
+  </p>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>15</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 16 — PHASE II: AUDIT ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Methodology — Phase ii.</span>
+  </div>
+
+  <div class="section-label">
+    <span>Phase ii.</span>
+    <span class="num">b.</span>
+    <span>AI-Augmented Audit</span>
+  </div>
+
+  <h2 class="page-headline">Audits, accelerated by<br><em>tested prompts</em>.</h2>
+  <p class="page-deck">The audit is where most of the strategic decisions get made &mdash; and where AI cuts the most time. Every client gets its own Claude Project with the full document base loaded as context, so the model isn't auditing in the dark.</p>
+
+  <p class="case-body">
+    Each Claude Project is set up the same way: the <em>Reference Document for AI</em> loads first as orientation; the brand strategy playbook, performance reports, and audit perspective files load next as source material; system instructions establish the analyst role and constraints. By the time the first audit prompt runs, the model already knows the brand, the data, and the deliverable format.
+  </p>
+
+  <p class="case-body">
+    <strong>Prompt discipline matters.</strong> I keep a tested library of audit prompts &mdash; flow audit, segment audit, deliverability audit, copy audit, design audit &mdash; refined across multiple clients. New clients get the proven prompt; the model gets reproducible quality.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/15_claude_projects.png" alt="Claude Projects index showing 18+ client projects">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 15</span>
+    <span class="text">Claude Projects index &mdash; one project per client, each preloaded with its document base and system instructions.</span>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/16_claude_msp_chats.png" alt="Master Spa Parts Claude project showing many threaded audit conversations">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 16</span>
+    <span class="text">Master Spa Parts project &mdash; partial view of audit threads spanning segments, deliverability, flow optimization, brand positioning, and campaign analysis.</span>
+  </div>
+
+  <p class="case-body">
+    Every audit ends in the same artifact: <em>a gap analysis</em>. What's broken, what's missing, what's underperforming, what's leaving money on the table. That document is what the entire next phase &mdash; strategy and planning &mdash; gets built on top of.
+  </p>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>16</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 17 — PHASE III: STRATEGY ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Methodology — Phase iii.</span>
+  </div>
+
+  <div class="section-label">
+    <span>Phase iii.</span>
+    <span class="num">c.</span>
+    <span>Strategy &amp; Planning</span>
+  </div>
+
+  <h2 class="page-headline">From gaps <em>to a plan</em>.</h2>
+  <p class="page-deck">Audit findings translate into two distinct planning tracks: lifecycle flow strategy &mdash; the always-on engine &mdash; and a monthly campaign calendar &mdash; the seasonal layer that runs on top. Lists &amp; segmentation runs as a third track in parallel.</p>
+
+  <p class="case-body">
+    <strong>The flow track is structural.</strong> Each new flow gets a dedicated strategy document &mdash; trigger logic, branch conditions, message count, copy direction, exit rules, and the specific metric it's expected to move. Eleven flow strategies sit in the New Flows Strategy folder for Master Spa Parts alone &mdash; At-Risk Recovery, Chemical Replenishment, CLV Tiered, Cross-Sell, First-to-Second Purchase, Review Request, Sunset, Transactional, VIP Champion Retention, Welcome Series V2, plus the SMS Integration master.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/17_drive_flows_strategy.png" alt="New Flows Strategy folder with 11 flow strategy documents">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 17</span>
+    <span class="text">New Flows Strategy folder &mdash; one document per flow, eleven flows for Master Spa Parts.</span>
+  </div>
+
+  <p class="case-body">
+    <strong>The campaign track is rhythmic.</strong> Every month gets its own folder under Content Deliverables &gt; Campaigns Plan, with the calendar built around seasonal moments, product launches, and segment-specific sends. Campaigns aren't drafted ad hoc &mdash; they're planned a month ahead, written two weeks ahead, and scheduled into Klaviyo two weeks before send.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/18_drive_campaigns_plan.png" alt="Campaigns Plan folder showing March, April, May 2026 monthly folders">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 18</span>
+    <span class="text">Campaigns Plan folder &mdash; monthly cadence: March, April, and May 2026 already structured.</span>
+  </div>
+
+  <div class="scope" style="margin-top: 30px;">
+    <h4>Lists &amp; Segmentation, in parallel</h4>
+    <ul>
+      <li>List hygiene rules (sunset windows, suppression criteria)</li>
+      <li>List growth strategy (forms, popups, partner placements)</li>
+      <li>Segment library powering both flows and campaigns</li>
+      <li>Custom profile properties for personalization</li>
+    </ul>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>17</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 18 — PHASE IV: CONTENT ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Methodology — Phase iv.</span>
+  </div>
+
+  <div class="section-label">
+    <span>Phase iv.</span>
+    <span class="num">d.</span>
+    <span>Content Creation</span>
+  </div>
+
+  <h2 class="page-headline">Copy <em>before</em> design.</h2>
+  <p class="page-deck">Every email starts as a structured Google Doc &mdash; subject lines (A and B), preview text, full body copy, and design notes for the team. The doc is the single source of truth before any pixel gets drawn.</p>
+
+  <p class="case-body">
+    The structure repeats across every email and every campaign series. For the <em>Double Rewards</em> campaign &mdash; a 4-day promotional series with three send touchpoints &mdash; the deliverable is one document with three sections: <strong>ANNOUNCEMENT</strong>, <strong>REMINDER</strong>, <strong>FINAL CALL</strong>. Each section has its own subject lines, preview text, full body copy with merge tags, and a designer brief at the bottom describing visual hierarchy, image direction, and CTA emphasis.
+  </p>
+
+  <p class="case-body">
+    This separation matters. The copywriter's job is to make the message convert; the designer's job is to make it readable and on-brand. Mixing the two in a Klaviyo template editor before either is finalized is how programs get slow and inconsistent.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/19_doc_strategy.png" alt="MSP Double Rewards strategy document with email copy structure">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 19</span>
+    <span class="text">_MSP_DOUBLE_REWARDS strategy doc &mdash; subject lines, preview text, body copy, and designer notes for all three emails in a single source file.</span>
+  </div>
+
+  <p class="pull-quote" style="margin-top: 30px;">
+    The copy doc is where the campaign is actually decided. By the time the designer opens Figma, every word, every CTA, every dynamic block has already been spec'd.
+  </p>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>18</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 19 — PHASE V: DESIGN ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Methodology — Phase v.</span>
+  </div>
+
+  <div class="section-label">
+    <span>Phase v.</span>
+    <span class="num">e.</span>
+    <span>Design Production</span>
+  </div>
+
+  <h2 class="page-headline">Figma for <em>brand-grade</em><br>emails. Klaviyo native for<br>everything else.</h2>
+  <p class="page-deck">Email design splits into two paths. High-stakes campaigns and templates get designed in Figma by the designer to a detailed brief; transactional and lower-priority sends get built directly with Klaviyo's native blocks. Both paths feed into the same brand system.</p>
+
+  <p class="case-body">
+    The Double Rewards series ran through the Figma path &mdash; three emails, each ~2,000px tall, designed to a master template stored in the Master SPA Figma file. The brief includes the visual hierarchy (hero image, headline weight, urgency framing for emails 2 and 3), color treatment, and the structural blocks (testimonials, product grids, the math break-down, urgency footers).
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/20_figma_designs.png" alt="Figma file showing all three Double Rewards emails side by side">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 20</span>
+    <span class="text">Master SPA Figma file &mdash; the Double Rewards series designed as a single sequenced piece, ANNOUNCEMENT through FINAL CALL.</span>
+  </div>
+
+  <div class="subsection" style="margin-top: 36px;">
+    <div class="subsection-label">The finished sequence</div>
+    <h3>From announcement to <em>final call</em>.</h3>
+    <p class="case-body" style="margin-top: 14px;">
+      Each email in the sequence escalates urgency without losing brand voice. Email 01 introduces the promotion. Email 02 reinforces value with social proof and product focus. Email 03 closes with scarcity and a single decision.
+    </p>
+  </div>
+
+  <div class="email-triptych">
+    <div class="email-card">
+      <img src="screenshots/21_email_1.png" alt="Email 1 - Announcement">
+      <div class="email-card-label">
+        <div class="num">i.</div>
+        <div class="title">Announcement</div>
+      </div>
+    </div>
+    <div class="email-card">
+      <img src="screenshots/22_email_2.png" alt="Email 2 - Reminder">
+      <div class="email-card-label">
+        <div class="num">ii.</div>
+        <div class="title">Reminder &middot; 48 Hours</div>
+      </div>
+    </div>
+    <div class="email-card">
+      <img src="screenshots/23_email_3.png" alt="Email 3 - Final Call">
+      <div class="email-card-label">
+        <div class="num">iii.</div>
+        <div class="title">Final Call &middot; 6 Hours</div>
+      </div>
+    </div>
+  </div>
+  <div class="figure-caption">
+    <span class="label">Fig. 21</span>
+    <span class="text">Three emails, one promotional arc &mdash; designed in Figma, sliced and built in Klaviyo, sent as a sequenced campaign.</span>
+  </div>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>19</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 20 — PHASE VI: IMPLEMENTATION ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Methodology — Phase vi.</span>
+  </div>
+
+  <div class="section-label">
+    <span>Phase vi.</span>
+    <span class="num">f.</span>
+    <span>Implementation</span>
+  </div>
+
+  <h2 class="page-headline">Where strategy <em>becomes</em><br>a live send.</h2>
+  <p class="page-deck">Implementation is the final translation: every flow strategy doc becomes a flow chart in Klaviyo's visual builder; every email Google Doc becomes a tested template; every segment definition becomes a queryable list. This is where the time gets spent.</p>
+
+  <p class="case-body">
+    <strong>Email templates</strong> get sliced from the Figma design &mdash; image blocks, text blocks, dynamic product blocks (pulling from the custom feeds), CTA buttons all wired up. Variable blocks accept the merge tags from the copy doc directly. Every template gets a pre-send QA: render check, link check, dynamic-block check, deliverability check.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/24_klaviyo_editor.png" alt="Klaviyo email editor showing the summer-ready educational campaign in production">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 22</span>
+    <span class="text">Klaviyo email editor &mdash; the summer-ready educational campaign in production. Image blocks, text, products, CTAs all assembled directly from the brief.</span>
+  </div>
+
+  <p class="case-body">
+    <strong>Flows</strong> get architected in the visual builder &mdash; every trigger, every conditional split (<em>if profile property X then path A else path B</em>), every wait timer, every A/B variation node. The MSP CLV Tiered Flow uses 8+ branch conditions to send different messages to first-time, second-time, and high-value buyers, with separate cover, filter, and chemical paths inside each tier.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/25_klaviyo_flow_builder.png" alt="Klaviyo flow visual builder showing complex branching logic">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 23</span>
+    <span class="text">Flow visual builder &mdash; branching logic for a multi-path tiered flow. Every condition, wait timer, and A/B variation visible at a glance.</span>
+  </div>
+
+  <p class="case-body">
+    <strong>Custom profile properties</strong>, <strong>segments</strong>, and <strong>lists</strong> &mdash; every audience definition is set up to be reusable across both flows and campaigns. A profile property created for the Replenishment flow becomes immediately available as a campaign filter for any send.
+  </p>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>20</span>
+  </div>
+</section>
+
+<!-- ============ PAGE 21 — PHASE VI CONT'D: SCHEDULE & RESULTS ============ -->
+<section class="page">
+  <div class="runner">
+    <span>Portfolio · MMXXVI</span>
+    <span>Methodology — Phase vi.</span>
+  </div>
+
+  <div class="section-label">
+    <span>Phase vi.</span>
+    <span class="num">g.</span>
+    <span>Schedule &amp; Results</span>
+  </div>
+
+  <h2 class="page-headline">Two weeks ahead.<br><em>Always</em>.</h2>
+  <p class="page-deck">By the time a month begins, every campaign in it is scheduled in Klaviyo. The two-week lead time isn't a nice-to-have &mdash; it's what makes A/B testing, deliverability checks, designer review, and stakeholder approval possible without rushing the night before send.</p>
+
+  <p class="case-body">
+    The May 2026 calendar was scheduled in mid-April. Twenty-plus campaigns &mdash; Memorial Day promos, weekly bestseller features, segment-specific sends (BIS Cross-Sell, Lapsed VIP Win-Back, Pillow Comfort Replacement, Filter 6-Month Replacement, Chemical Maintenance Monthly), SMS layered on top, A/B variants on flagship sends &mdash; all queued and awaiting their send time.
+  </p>
+
+  <figure class="screenshot">
+    <img src="screenshots/26_klaviyo_scheduled.png" alt="Klaviyo scheduled campaigns view showing future May 2026 sends">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 24</span>
+    <span class="text">May 2026 schedule view &mdash; twenty-plus campaigns queued mid-April, including SMS sends and A/B variants on flagship campaigns.</span>
+  </div>
+
+  <div class="subsection">
+    <div class="subsection-label">From cycle to results</div>
+    <h3>The Double Rewards series, <em>live</em>.</h3>
+    <p class="case-body" style="margin-top: 14px;">
+      Designed in Figma, written in Docs, scheduled two weeks ahead &mdash; the three-email series sent over four days to the VIP rewards segment. The full cycle, from audit findings to attributed revenue, runs through this sequence.
+    </p>
+  </div>
+
+  <div class="metrics-hero">
+    <div class="metric-hero">
+      <div class="num">$25,869</div>
+      <div class="label">Email 01 · Announcement</div>
+      <span class="delta">32.74% open · 0.64% click</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">$36,231</div>
+      <div class="label">Email 02 · Reminder</div>
+      <span class="delta">28.74% open · top performer</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">$23,564</div>
+      <div class="label">Email 03 · Final Call</div>
+      <span class="delta">27.52% open · 0.42% click</span>
+    </div>
+    <div class="metric-hero">
+      <div class="num">$85,664</div>
+      <div class="label">Series Total Revenue</div>
+      <span class="delta">three sends · single segment</span>
+    </div>
+  </div>
+
+  <figure class="screenshot">
+    <img src="screenshots/27_campaigns_sent.png" alt="Three Double Rewards campaigns showing sent status and revenue">
+  </figure>
+  <div class="figure-caption">
+    <span class="label">Fig. 25</span>
+    <span class="text">Double Rewards series, post-send &mdash; three emails to the VIP rewards segment, $85,664 in attributed revenue across the campaign.</span>
+  </div>
+
+  <p class="pull-quote">
+    Strategy first. Design second. Build third. Schedule fourth. The cycle repeats &mdash; and the next campaign is already in draft.
+  </p>
+
+  <div class="footer-runner">
+    <span>R · P</span>
+    <span>21</span>
+  </div>
+</section>
+
+</body>
+</html>
